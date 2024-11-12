@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 
 const ProductContext = createContext();
 
-ProductProvider.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
 export function ProductProvider({ children }) {
   const [products, setProducts] = useState([
     { id: 1, name: 'Laptop', description: 'Una laptop potente para trabajo y entretenimiento' },
@@ -34,5 +30,9 @@ export function ProductProvider({ children }) {
     </ProductContext.Provider>
   );
 }
+
+ProductProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default ProductContext;

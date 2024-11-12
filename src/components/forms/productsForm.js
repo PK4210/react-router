@@ -83,9 +83,7 @@ ProductForm.propTypes = {
       name: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
     })
-  ),
-  addProduct: PropTypes.func.isRequired,
-  updateProduct: PropTypes.func.isRequired,
+  )
 };
 
 export default ProductForm;
