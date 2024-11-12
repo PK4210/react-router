@@ -1,12 +1,38 @@
-Tarea de React Router
-Crear  un proyecto nuevo que tenga un navbar que permita navegar entre paginas:
-Pagina 1 (pagina por defecto)- Users, mostrar listado de usuarios, mostrar el avatar en la tabla, para esto llamar al api https://reqres.in (users), se debe permitir crear, eliminar y editar, el crear y editar deben redireccionar a otra pagina. El editar debe recibir el id como parte de la ruta y llamar al API para obtener los datos de ese usuario en especifico
-Pagina 2 - Productos, mostrar un listado de productos, los productos deben estar en cargados en memoria, sin usar una API, se debe permitir crear, eliminar y editar, el crear y editar deben redireccionar a otra pagina. El editar debe recibir los datos del producto actual utilizando un context
+# Tarea de React Router
 
-Puntaje:
-Proyecto Funcionando 40pts
-Uso de Proptypes 10pts
-Uso de estilos 10pts
-Uso de configuración base para axios 10pts
+## Instrucciones
+Crear un proyecto nuevo que incluya un navbar para navegar entre las siguientes páginas:
 
-Guia: https://hygraph.com/blog/routing-in-react
+### Página 1 - Users (Página por defecto)
+- Mostrar un listado de usuarios.
+- Incluir el avatar de cada usuario en la tabla.
+- Para esto, realizar llamadas al API de [reqres.in](https://reqres.in) (users).
+- Funcionalidades:
+  - **Crear**: Permitir la creación de usuarios, redireccionando a otra página.
+  - **Eliminar**: Permitir la eliminación de usuarios desde la lista.
+  - **Editar**: Permitir la edición de usuarios. La edición debe:
+    - Redireccionar a otra página.
+    - Recibir el ID del usuario en la ruta.
+    - Hacer una llamada al API para obtener los datos específicos de ese usuario.
+
+### Página 2 - Productos
+- Mostrar un listado de productos.
+- Los productos deben estar almacenados en memoria (no usar una API externa).
+- Funcionalidades:
+  - **Crear**: Permitir la creación de productos, redireccionando a otra página.
+  - **Eliminar**: Permitir la eliminación de productos desde la lista.
+  - **Editar**: Permitir la edición de productos. La edición debe:
+    - Redireccionar a otra página.
+    - Utilizar el contexto (Context) para cargar los datos del producto actual.
+
+## Puntaje
+
+| Criterio                       | Puntaje |
+|--------------------------------|---------|
+| Proyecto Funcionando           | 40 pts  |
+| Uso de PropTypes               | 10 pts  |
+| Uso de Estilos                 | 10 pts  |
+| Uso de Configuración base para axios | 10 pts  |
+
+## Guía
+[Routing en React](https://hygraph.com/blog/routing-in-react)
