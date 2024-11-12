@@ -1,6 +1,11 @@
 import React, { createContext, useState } from 'react';
+import PropTypes from 'prop-types';
 
 const ProductContext = createContext();
+
+ProductProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export function ProductProvider({ children }) {
   const [products, setProducts] = useState([

@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import ProductContext from '../../contexts/productsContext';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 function ProductForm() {
   const { products, addProduct, updateProduct } = useContext(ProductContext);
@@ -69,5 +70,22 @@ function ProductForm() {
     </Container>
   );
 }
+
+// PropTypes para la estructura esperada de los props en ProductForm
+ProductForm.propTypes = {
+  product: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  }),
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+    })
+  ),
+  addProduct: PropTypes.func.isRequired,
+  updateProduct: PropTypes.func.isRequired,
+};
 
 export default ProductForm;

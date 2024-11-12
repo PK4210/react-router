@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import axios from '../axiosConfig';
+import axios from '../axiosConfig'; // Usando el axiosInstance que configuraste
 import { Form, Button, Container } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 function UserForm() {
   const [user, setUser] = useState({ first_name: '', last_name: '', email: '' });
@@ -26,7 +27,7 @@ function UserForm() {
       } else {
         // Si no hay un ID, crear un nuevo usuario
         await axios.post('/users', user);
-        console.log('Creando usuario')
+        console.log('Creando usuario');
       }
       navigate('/');
     } catch (error) {
@@ -81,5 +82,14 @@ function UserForm() {
     </Container>
   );
 }
+
+// PropTypes para la estructura esperada del usuario
+UserForm.propTypes = {
+  user: PropTypes.shape({
+    first_name: PropTypes.string.isRequired,
+    last_name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+  }),
+};
 
 export default UserForm;
